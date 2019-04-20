@@ -20,7 +20,7 @@ namespace GuessMyNumber
             ConsoleKeyInfo PromptForMenu()
             {
                 string prompt;
-                prompt = "Welcome to Guess My Number Game:\n\t1 - Bisection Algorithm\n\t2 - Human Plays\n\t3 - Computer Plays\n\tEsc - quit\n\nPress option on keyboard... ";
+                prompt = "Welcome to Guess My Number Game:\n\n\t1 - Bisection Algorithm\n\t2 - Human Plays\n\t3 - Computer Plays\n\tEsc - quit\n\nPress option on keyboard... ";
 
                 Console.Write(prompt);
                 return Console.ReadKey();
@@ -111,10 +111,10 @@ namespace GuessMyNumber
                 }
                 while (value != guess);
 
-                Console.WriteLine($"\nYou guessed {value} in {iterations} iterations.\n");
+                Console.WriteLine($"\n\nYou guessed {value} in {iterations} iterations.\n");
                 stats.Add(iterations);
 
-                Console.WriteLine($"You played {stats.Count} time(s), your avg is {stats.Average()} iterations.\n");
+                Console.WriteLine($"You played {stats.Count} time(s), your average is {stats.Average()} iterations.\n");
 
             } while (PlayAgainPrompt());
         }
